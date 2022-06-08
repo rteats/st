@@ -1,4 +1,4 @@
-Similar to [dwm-flexipatch](https://github.com/bakkeby/dwm-flexipatch) this st 0.8.5 (2aefa34, 2022-03-13) project has a different take on st patching. It uses preprocessor directives to decide whether or not to include a patch during build time. Essentially this means that this build, for better or worse, contains both the patched _and_ the original code. The aim being that you can select which patches to include and the build will contain that code and nothing more.
+Similar to [dwm-flexipatch](https://github.com/bakkeby/dwm-flexipatch) this st 0.8.5 (ef05519, 2022-03-18) project has a different take on st patching. It uses preprocessor directives to decide whether or not to include a patch during build time. Essentially this means that this build, for better or worse, contains both the patched _and_ the original code. The aim being that you can select which patches to include and the build will contain that code and nothing more.
 
 For example to include the `alpha` patch then you would only need to flip this setting from 0 to 1 in [patches.h](https://github.com/bakkeby/st-flexipatch/blob/master/patches.def.h):
 ```c
@@ -14,6 +14,8 @@ Refer to [https://st.suckless.org/](https://st.suckless.org/) for details on the
 ---
 
 ### Changelog:
+
+2022-04-11 - Added the background image reload patch
 
 2022-03-10 - Added the background image patch
 
@@ -101,6 +103,9 @@ Refer to [https://st.suckless.org/](https://st.suckless.org/) for details on the
       - draws a background image in farbfeld format in place of the defaultbg color allowing for
         pseudo transparency
 
+   - background-image-reload
+      - allows the background image to be reloaded similar to xresources using USR1 signals
+
    - [blinking-cursor](https://st.suckless.org/patches/blinking_cursor/)
       - allows the use of a blinking cursor
 
@@ -145,7 +150,7 @@ Refer to [https://st.suckless.org/](https://st.suckless.org/) for details on the
       - this patch makes the cursor color the inverse of the current cell color
 
    - [externalpipe](https://st.suckless.org/patches/externalpipe/)
-      - this patch allows for eading and writing st's screen through a pipe, e.g. to pass info to dmenu
+      - this patch allows for reading and writing st's screen through a pipe, e.g. to pass info to dmenu
 
    - [externalpipein](https://lists.suckless.org/hackers/2004/17218.html)
       - this patch prevents the reset of the signal handler set on SIGCHILD, when the forked process that executes the external process exits
