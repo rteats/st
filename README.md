@@ -1,4 +1,4 @@
-Similar to [dwm-flexipatch](https://github.com/bakkeby/dwm-flexipatch) this st 0.8.5 (ef05519, 2022-03-18) project has a different take on st patching. It uses preprocessor directives to decide whether or not to include a patch during build time. Essentially this means that this build, for better or worse, contains both the patched _and_ the original code. The aim being that you can select which patches to include and the build will contain that code and nothing more.
+Similar to [dwm-flexipatch](https://github.com/bakkeby/dwm-flexipatch) this st 0.8.5 (baa9357, 2022-05-01) project has a different take on st patching. It uses preprocessor directives to decide whether or not to include a patch during build time. Essentially this means that this build, for better or worse, contains both the patched _and_ the original code. The aim being that you can select which patches to include and the build will contain that code and nothing more.
 
 For example to include the `alpha` patch then you would only need to flip this setting from 0 to 1 in [patches.h](https://github.com/bakkeby/st-flexipatch/blob/master/patches.def.h):
 ```c
@@ -95,9 +95,9 @@ Refer to [https://st.suckless.org/](https://st.suckless.org/) for details on the
    - [anysize](https://st.suckless.org/patches/anysize/)
       - allows st to reize to any pixel size rather than snapping to character width / height
 
-   - [anysize_nobar](https://github.com/connor-brooks/st-anysize-nobar)
-      - a patch that aims to prevent black bars being drawn on the edges of st terminals using the
-        anysize patch
+   - [~anysize_nobar~](https://github.com/connor-brooks/st-anysize-nobar)
+      - ~a patch that aims to prevent black bars being drawn on the edges of st terminals using the
+        anysize patch~
 
    - [background-image](https://st.suckless.org/patches/background_image/)
       - draws a background image in farbfeld format in place of the defaultbg color allowing for
